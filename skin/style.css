@@ -6,7 +6,11 @@
 	background: -o-radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
 	background: -ms-radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
 	background: radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
+
+	-webkit-box-shadow: 0 0 2px 2px #999;
+	box-shadow: 0 0 2px 2px #999;
 }
+
 
 .jp-controls li,.jp-toggles li,.jp-playlist li {
 	display: inline;
