@@ -44,6 +44,14 @@
 	transition: width 0s;
 }
 
+#time {
+	height: 20px;
+}
+
+.jp-current-time {
+	float: left;
+}
+
 .jp-duration {
 	float: right;
 }
