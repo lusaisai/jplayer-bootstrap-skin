@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.jp-audio {
+  width: 224px;
+  background: -webkit-radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
+  background: -o-radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
+  background: -ms-radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
+  background: -webkit-radial-gradient(ellipse at center, #feffff 0%, #d2ebf9 100%);
+  background: -o-radial-gradient(ellipse at center, #feffff 0%, #d2ebf9 100%);
+  background: radial-gradient(ellipse at center, #feffff 0%,#d2ebf9 100%);
+  box-shadow: 0 0 2px 2px #999;
+}
+
+.jp-controls li,
+.jp-toggles li,
+.jp-playlist li {
+  display: inline;
+  font-family: 微软雅黑,宋体,Arial,sans-serif;
+}
+
+.jp-controls,
+.jp-playlist ul {
+  margin-left: auto;
+  padding-left: 0;
+}
+
+.jp-volume-bar,
+.jp-volume-bar-value {
+  display: inline-block;
+  width: 148px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  height: 15px;
+  cursor: pointer;
+}
+
+.jp-progress,
+.jp-seek-bar,
+.jp-play-bar {
+  width: 224px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.jp-progress .progess,
+.jp-progress .progress-bar {
+  -webkit-transition: width 0s;
+  -o-transition: width 0s;
+  -ms-transition: width 0s;
+  transition: width 0s;
+}
+
+#time {
+  height: 20px;
+}
+
+.jp-current-time {
+  float: left;
+}
+
+.jp-duration {
+  float: right;
+}
+
+.jp-playlist li div {
+  margin: 5px;
+}
+
+.jp-playlist-current div a, .jp-playlist-current div a:hover {
+color: #fff;
+text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff2d95, 0 0 6px #ff2d95, 0 0 8px #ff2d95, 0 0 10px #ff2d95, 0 0 13px #ff2d95;
+font: 'MisoRegular';
+}
+
+.jp-playlist-item-remove {
+  float: right;
+}
+
+.jp-volume-max,.jp-repeat-off,.jp-repeat {
+  float: right;
+}
