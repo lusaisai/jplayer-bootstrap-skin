@@ -7,6 +7,10 @@ Usage
 It depends on BootStrap, make sure it is already included, then include the js and css file in your page.
 ```html
     <link href="jplayer-bootstrap.css" rel="stylesheet">
+```
+
+JPlayer does not have buffer status showing, you can include the following javascript to show it.
+```html
     <script type="text/javascript" src="jplayer-buffer.js"></script>
 ```
 
