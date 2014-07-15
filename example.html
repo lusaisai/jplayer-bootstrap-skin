@@ -14,8 +14,6 @@
 	<script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
-	var jBuffer = new JPlayerBuffer('jquery_jplayer_1');
-
 	new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
 		cssSelectorAncestor: "#jp_container_1"
@@ -42,7 +40,7 @@ $(document).ready(function(){
 			autoPlay: true,
 			enableRemoveControls: true
 		},
-		timeupdate: jBuffer.buffer()
+		timeupdate: new JPlayerBuffer('jquery_jplayer_1').buffer()
 	});
 });
 //]]>
