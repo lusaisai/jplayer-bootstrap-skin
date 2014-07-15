@@ -14,8 +14,9 @@
 .jp-controls li,
 .jp-toggles li,
 .jp-playlist li {
-  display: inline;
-  font-family: 微软雅黑,宋体,Arial,sans-serif;
+  display: inline !important;
+  font-family: "Microsoft YaHei","Hiragino Sans GB W3",Tahoma,Arial;
+  text-shadow: 0 0 1px #EEEEEE;
 }
 
 .jp-controls,
@@ -45,13 +46,13 @@
 
 .jp-progress .progess,
 .jp-progress .progress-bar {
-  -webkit-transition: width 0s;
-  -o-transition: width 0s;
-  -ms-transition: width 0s;
-  transition: width 0s;
+  -webkit-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
 }
 
-#time {
+.jp-times {
   height: 20px;
 }
 
@@ -79,4 +80,9 @@ font: 'MisoRegular';
 
 .jp-volume-max,.jp-repeat-off,.jp-repeat {
   float: right;
+}
+
+.jp-buffer-bar {
+  box-shadow: none;
+  opacity: 0.66;
 }

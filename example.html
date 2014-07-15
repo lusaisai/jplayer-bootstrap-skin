@@ -2,56 +2,47 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Demo : jplayer skinned in bootstrap3</title>
-	<link href="skin3/bootstrap/css/bootstrap.css" rel="stylesheet" media="all">
-	<link href="skin3/bootstrap/css/bootstrap-theme.css" rel="stylesheet" media="all">
-	<link href="skin3/style.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+	<title>Demo : jplayer skinned in bootstrap</title>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="jplayer-boostrap.css" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="jQuery.jPlayer.2.6.0/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="jQuery.jPlayer.2.6.0/add-on/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="jplayer-buffer.js"></script>
 	<script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
+	var jBuffer = new JPlayerBuffer('jquery_jplayer_1');
 
 	new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
 		cssSelectorAncestor: "#jp_container_1"
 	}, [
 	{
-		title:"Tempered Song",
-		mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
-		oga:"http://www.jplayer.org/audio/ogg/Miaow-01-Tempered-song.ogg"
+		title:"Song From a Secret Garden",
+		mp3:"http://www.lusaisai.com/resources/music/Secret%20Garden/CD1/Song%20From%20a%20Secret%20Garden%20%E7%A5%9E%E7%A7%98%E5%9B%AD%E4%B9%8B%E6%AD%8C.mp3"
 	},
 	{
-		title:"Hidden",
-		mp3:"http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3",
-		oga:"http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg"
+		title:"The Promise",
+		mp3:"http://www.lusaisai.com/resources/music/Secret%20Garden/CD1/The%20Promise%20%E8%AF%BA%E8%A8%80.mp3"
 	},
 	{
-		title:"Lentement",
-		mp3:"http://www.jplayer.org/audio/mp3/Miaow-03-Lentement.mp3",
-		oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg"
-	},
-	{
-		title:"Lismore",
-		mp3:"http://www.jplayer.org/audio/mp3/Miaow-04-Lismore.mp3",
-		oga:"http://www.jplayer.org/audio/ogg/Miaow-04-Lismore.ogg"
-	},
-	{
-		title:"The Separation",
-		mp3:"http://www.jplayer.org/audio/mp3/Miaow-05-The-separation.mp3",
-		oga:"http://www.jplayer.org/audio/ogg/Miaow-05-The-separation.ogg"
-	},
+		title:"Concerto Pour Ceux",
+		mp3:"http://www.lusaisai.com/resources/music/%E5%BC%A0%E9%9D%93%E9%A2%96/%E5%80%BE%E5%90%AC(%E7%8E%B0%E5%9C%BA%E4%B8%93%E8%BE%91)/Concerto%20Pour%20Ceux.mp3"
+	}
 	], {
 		swfPath: "js",
 		supplied: "oga, mp3",
 		wmode: "window",
-		smoothPlayBar: true,
+		smoothPlayBar: false,
 		keyEnabled: true,
 		playlistOptions: {
-			autoPlay: false,
+			autoPlay: true,
 			enableRemoveControls: true
-		}
+		},
+		timeupdate: jBuffer.buffer()
 	});
 });
 //]]>
@@ -87,9 +78,10 @@ $(document).ready(function(){
 					<div class="jp-progress">
 						<div class="jp-seek-bar progress">
 							<div class="jp-play-bar progress-bar"></div>
+							<div class="jp-buffer-bar progress-bar" style="width: 0%"></div>
 						</div>
 					</div>
-					<div id="time">
+					<div class="jp-times">
 						<div class="jp-current-time badge"></div>
 						<div class="jp-duration badge"></div>
 					</div>
