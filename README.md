@@ -14,9 +14,11 @@ JPlayer does not have buffer status showing, you can include the following javas
     <script type="text/javascript" src="jplayer-buffer.js"></script>
 ```
 
-In your javascript code, construct an object with the jplayer id, then run the buffer method which will return a function object, bind this object to the timeupdate event. See example.html for details.
+In your javascript code, construct an object with the jplayer id, then run the buffer method which will return a function object, bind this object to both timeupdate and progress event. See example.html for details.
 ```javascript
+	var buffer = new JPlayerBuffer('jquery_jplayer_1').buffer();
     ...
-    timeupdate: new JPlayerBuffer('jquery_jplayer_1').buffer()
+    timeupdate: buffer,
+    progress: buffer
     ...
 ```
