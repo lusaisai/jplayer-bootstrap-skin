@@ -24,7 +24,7 @@
 			    var buffertime = audio.buffered.end(0);
 
 			    if ( Math.floor(duration) == Math.floor(buffertime) ) {
-			        that.setBufferWidth(100 - event.jPlayer.status.currentPercentRelative - 0.1); // minus 0.1 to avoid overflow when css is changing
+			        that.setBufferWidth(100 - event.jPlayer.status.currentPercentRelative - 0.2); // minus 0.2 to avoid overflow when css is changing
 			        var width = $(that.cssSeekBar).width() + 1; // tmp fix of bootstrap stack gap when resizing
 			        $(that.cssSeekBar).css('width', width + 'px'); 
 			    } else {
